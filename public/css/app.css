@@ -64,6 +64,7 @@ header .extra-element#extra1 {
 header .extra-element#extra2 {
   -webkit-transform: scale(0.3, 0.3);
           transform: scale(0.3, 0.3);
+  bottom: -6px;
 }
 
 header.services-header {

@@ -17,7 +17,7 @@
         <a class="main-link" href="/services">Услуги</a>
       </nav>
       <div class="slogan">
-        <h1>Наши услуги</h1>
+        <h1>Услуги</h1>
             <span>Ваши желания - Наши возможности</span>
       </div>
     </div>

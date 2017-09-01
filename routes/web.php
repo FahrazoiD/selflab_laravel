@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/about', function () {
     return view('about');
@@ -22,3 +22,12 @@ Route::get('/about', function () {
 Route::get('/services', function () {
     return view('services');
 });
+
+Route::get('/extra', function () {
+    return view('extra');
+});
+
+Route::post('/sendemail', [
+    'uses' => 'EmailController@postSendEmail',
+    'as' => 'sendemail'
+]);
