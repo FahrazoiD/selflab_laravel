@@ -13,7 +13,7 @@
         <a class="logo-wrap" href="/">
           <img class="logo" src="./images/selflab_logo.png" alt="SelfLaboratory logo">
         </a>
-        <a class="main-link" href="/extra">Портфолио</a>
+        <a class="main-link" href="/album">Портфолио</a>
         <a class="main-link" href="/services">Услуги</a>
       </nav>
       <div class="slogan">

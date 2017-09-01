@@ -7,19 +7,25 @@ class EmailController extends Controller {
 
   public function postSendEmail(Request $request) {
 
-    $name = $request['name'];
-    $email = $request['email'];
-    $text = $request['message'];
+    $name = test_input($request['name'], 1);
+    $email = test_input($request['email'], 1);
+    $text = test_input($request['message'], 0);
     
     \Mail::send('emails.feedbackmail', array(
       'name' => $name,
       'email' => $email,
       'text' => $text
     ), function($message) {
-      $message->to('info@selflaboratory.ru', 'Vladislava Stalnova')->subject('Selflab request');
+      $message->to('anton.fakhr@gmail.com', 'Vladislava Stalnova')->subject('Selflab request');
     });
 
     return redirect()->route('home');
   }
 
+}
+
+function test_input($data, $type) {
+  if($type) { $data = trim($data); $data = stripslashes($data); }
+  $data = htmlspecialchars($data);
+  return $data;
 }

@@ -147,7 +147,8 @@ function getInstagramData() {
     filter: function filter(image) {
       return image.tags.indexOf('butterfly') >= 0;
     },
-    template: '<img src="{{image}}">'
+    template: '<img src="{{image}}">',
+    clientId: '4bd067fbe2ad48338513eba37c17c99b'
   });
 
   console.log('ok');

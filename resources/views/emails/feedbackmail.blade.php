@@ -7,6 +7,8 @@
 {{ $email }}
 </p>
 
-<i>
+<hr>
+
+<pre>
 {{ $text }}
-</i>
+</pre>

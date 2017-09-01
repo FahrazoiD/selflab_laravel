@@ -142,12 +142,14 @@ function parallaxScroller() {
 function getInstagramData() {
 
   var feed = new Instafeed({
-    get: 'user',
-    userId: '3108753216',
-    filter: function filter(image) {
-      return image.tags.indexOf('butterfly') >= 0;
-    },
-    template: '<img src="{{image}}">'
+    get: 'tagged',
+    tagName: 'awesome',
+    // filter: function(image) {
+    //   return image.tags.indexOf('butterfly') >= 0;
+    // },
+    template: '<img src="{{image}}">',
+    clientId: '719292b9e1724d92963648331f34afcc',
+    accessToken: '509551526.719292b.bf60314a974c4f77b32d8e6cb385df83'
   });
 
   console.log('ok');
