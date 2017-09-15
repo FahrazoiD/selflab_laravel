@@ -72,9 +72,9 @@ header
 
     .slogan
       padding-top: 10%
-      max-width: 50%
+      max-width: 47%
       height: 100%
-      margin-left: 15%
+      margin-left: 7%
       display: flex
       flex-direction: column
       justify-content: space-around
@@ -90,8 +90,9 @@ header
       span
         color: $text-color-light
         letter-spacing: .05em
+        align-self: flex-end
         font:
-          size: 18px
+          size: 25px
           variant: small-caps
 
   &.services-header
@@ -131,7 +132,7 @@ header
     
     .slogan
       padding-top: 10%
-      max-width: 50%
+      max-width: 48%
       height: 100%
       margin-left: 10%
       display: flex
@@ -149,7 +150,7 @@ header
 
       span
         color: $text-color-light
-        align-self: flex-end
+        align-self: flex-start
         letter-spacing: .05em
         font:
           size: 26px
@@ -314,18 +315,54 @@ section
 
   &.album-section
     .container
-      padding: 20px 0 40px 0
+      padding: 50px 0 80px 0
       overflow-x: hidden
       z-index: 10
+      width: 100%
+      background-color: #f8f8f8
+
+      h2::after
+        content: ""
+        display: block
+        width: 100px
+        height: 2px
+        background-color: #F3CFBD
+        margin: 15px auto
+
+    .extra-block
+      height: 500px
+      width: 100%
+      position: absolute
+
+      &::before
+        content: ""
+        display: block
+        position: absolute
+        width: 100%
+        height: 100%
+        z-index: 5
+        background-color: $bg-color-light
+        transform: matrix(1,.05,0,1.2,0,0)
+        box-shadow: 0px 0px 8px $bg-color-dark
+
+      &::after
+        content: ""
+        display: block
+        position: absolute
+        width: 85%
+        height: 100%
+        z-index: 4
+        background-color: $bg-color-semilight
+        transform: matrix(1,.05,0,1.2,0,-10)
+        box-shadow: 4px -1px 4px $bg-color-dark
+        right: 0
 
     .grid
-      margin: 0 auto
+      margin: 50px auto    
 
       .grid-item
         margin-bottom: 10px
-
-        p
-
+        width: 320px
 
   &.services-section
     .container
@@ -827,8 +864,7 @@ section
 
 
   &.feedback-section
-    mi
-    n-height: 400px
+    min-height: 400px
     background-color: $bg-color-dark
     position: relative
     z-index: 10
@@ -888,7 +924,7 @@ section
           .contact-info
             list-style: none
             display: flex
-            margin: 50px
+            margin: 50px auto 50px auto
             justify-content: space-around
             color: $text-color-light
             line-height: 1.5em
@@ -903,6 +939,13 @@ section
                 font-size: 36px
                 margin: 5px
 
+              ruby
+                text-decoration: underline
+
+                rt
+                  color: $text-color-semidark
+                  text-align: left
+
         .contact-form
           width: 100%
 
@@ -915,6 +958,9 @@ section
 
             textarea
               resize: none
+
+            .g-recaptcha
+              margin-top: 20px
             
             input, textarea
               width: 100%

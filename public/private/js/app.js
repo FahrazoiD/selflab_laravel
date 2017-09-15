@@ -142,19 +142,41 @@ function parallaxScroller() {
 function getInstagramData() {
 
   var feed = new Instafeed({
-    get: 'tagged',
-    tagName: 'awesome',
-    // filter: function(image) {
-    //   return image.tags.indexOf('butterfly') >= 0;
-    // },
-    template: '<img src="{{image}}">',
-    clientId: '719292b9e1724d92963648331f34afcc',
-    accessToken: '509551526.719292b.bf60314a974c4f77b32d8e6cb385df83'
+    get: 'user',
+    userId: '3108753216',
+    filter: function filter(image) {
+      return image.tags.indexOf('butterfly') >= 0;
+    },
+    //template: '<div class="grid-item"><img src="{{image}}"><p>{{caption}}</p></div>',
+    template: '<div class="grid-item"><img src="{{image}}"></div>',
+    clientId: 'd1c051869a4d4a0fb4165399d638ba59',
+    accessToken: '3108753216.d1c0518.87bda88f40d94183a61c12be8d74072b',
+    resolution: 'low_resolution',
+    limit: 10,
+    after: function after() {
+      initMasonryGrid();
+    }
   });
 
   console.log('ok');
 
   feed.run();
+}
+
+function initMasonryGrid() {
+
+  var grid = document.querySelector('.grid');
+  var msnry = new Masonry(grid, {
+    itemSelector: '.grid-item',
+    columnWidth: 320,
+    fitWidth: true,
+    gutter: 10
+  });
+
+  imagesLoaded(grid).on('progress', function () {
+    // layout Masonry after each image loads
+    msnry.layout();
+  });
 }
 
 /***/ }),

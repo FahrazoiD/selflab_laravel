@@ -17,8 +17,8 @@
         <a class="main-link" href="/services">Услуги</a>
       </nav>
       <div class="slogan">
-        <h1>Альбом</h1>
-        <span>Главное — собрать хорошую команду, и тогда один день <br>может изменить всё</span>
+        <h1>Портфолио</h1>
+        <span>вдохновляясь моментом</span>
       </div>
     </div>
   </header>
@@ -26,9 +26,17 @@
 
 @section('content')
 <section class="album-section">
+  <!-- Extra block for angled edge -->
+  <div class="extra-block"></div>
   <div class="container">
+    <h2>
+      Наши работы
+    </h2>
+    <p class="section-quote">
+      Подпишитесь на Наш <a href="https://www.instagram.com/self_lab/">Instagram <i class="fa fa-instagram"></i></a>, чтобы увидеть ещё больше фотографий!<br>
+    </p>
     <div class="grid" id="instafeed">
-    <!-- Here goes Instagram data from app.js -->
+      <!-- Here goes Instagram data from app.js -->
     </div>
   </div>
 </section>

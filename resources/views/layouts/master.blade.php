@@ -8,10 +8,19 @@
       <link rel="stylesheet" href="./css/font-awesome.min.css">
       <link rel="stylesheet" href="./css/app.css">
 
+      {{-- ReCaptcha --}}
+      <script src='https://www.google.com/recaptcha/api.js'></script>
+
       <title>@yield('title')</title>
   </head>
 
   <body>
+    {{-- Form error --}}
+    @if (session('message'))
+      <script>
+        alert("{{ session('message') }}");
+      </script>
+    @endif
 
     {{--  Main content wrapper  --}}
     <div class="page">
@@ -31,8 +40,8 @@
     {{--  Extra js script  --}}
     <script src="./js/jquery.min.js"></script>
     <script src="./js/instafeed.min.js"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="./js/masonry.pkgd.min.js"></script>
+    <script src="./js/imagesloaded.pkgd.min.js"></script>
     <script src="./js/app.js"></script>
   </body>
 </html>

@@ -13,14 +13,19 @@
           <input type="text" name="name" placeholder="Имя" required >
           <input type="email" name="email" placeholder="Email" required >
           <textarea name="message" cols="30" rows="6" placeholder="Сообщение" required ></textarea>
+          <div class="g-recaptcha" data-sitekey="6LfT5i8UAAAAACLZqIToL1ZVxh1V4GorEBytZYd7"></div>
           <input type="hidden" name="_token" value="{{ Session::token() }}">
           <input type="submit" value="Отправить">
         </form>
       </div>
       <div class="contacts">
         <ul class="contact-info">
-          <li><i class="fa fa-envelope-o"></i> info@selflaboratory.ru</li>
-          <li><i class="fa fa-whatsapp"></i> +7 (926) 625-75-71</li>
+          <a href="mailto:info@selflaboratory.ru" style="color: #fdfdfd"><li><i class="fa fa-envelope-o"></i>
+            <ruby>info@selflaboratory.ru<rt>нажмите для отправки e-mail</rt></ruby></li>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=79266257571" style="color: #fdfdfd"><li><i class="fa fa-whatsapp"></i>
+            <ruby>+7 (926) 625-75-71<rt>нажмите для отправки whatsapp</rt><ruby></li>
+          </a>
         </ul>
       </div>
     </div>
